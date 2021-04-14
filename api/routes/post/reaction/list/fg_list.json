@@ -1,0 +1,30 @@
+{
+    "input": {
+        "reaction_id": []
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": null,
+        "data": {
+            "found": null,
+            "list": [{
+                "user": {
+                    "id": null,
+                    "username": null,
+                    "full_name": null,
+                    "birthday": null,
+                    "picture": {
+                        "raw": null,
+                        "show": null
+                    }
+                },
+                "reaction": {
+                    "id": null,
+                    "user_id": null,
+                    "post_id": null
+                }
+            }]
+        }
+    }
+}

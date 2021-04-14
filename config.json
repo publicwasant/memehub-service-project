@@ -1,0 +1,15 @@
+{
+    "server": {
+        "host": "http://m-h.comsciproject.com",
+        "port": 3000
+    },"database": {
+        "connectionLimit": 10,
+        "host": "127.0.0.1",
+        "user": "memehub",
+        "password": "Dv3g_z50",
+        "database": "comsci_memehub"
+    }, "media": {
+        "full_path": "http://m-h.comsciproject.com",
+        "upload_path": "/media/pictures/"
+    }
+}

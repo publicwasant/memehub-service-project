@@ -1,0 +1,22 @@
+{
+    "input": {
+        "user_id": null,
+        "comment_id": null,
+        "keys": ["c_text", "c_picture_id"],
+        "values": ["test", 154]
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "user_id": null,
+            "comment_id": null,
+            "keys": ["c_text", "c_picture_id"],
+            "values": ["test", 154]
+        }
+    }
+}

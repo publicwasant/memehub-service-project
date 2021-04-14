@@ -1,0 +1,18 @@
+{
+    "input": {
+        "post_id": null,
+        "keys": ["pt_text_caption", "pt_picture_id"],
+        "values": ["test", 149]
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "edited": null
+        }
+    }
+}

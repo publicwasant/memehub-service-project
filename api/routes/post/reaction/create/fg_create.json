@@ -1,0 +1,19 @@
+{
+    "input": {
+        "user_id": null,
+        "post_id": null
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "id": null,
+            "user_id": null,
+            "post_id": null
+        }
+    }
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Monitor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <style>
+            body {
+                font-family: Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
+            }
+
+            #nav {
+                background: #ddd;
+                position: sticky;
+                top: 0;
+                height: 55px;
+                padding: 8px;
+                margin: 0px;
+                margin-bottom: 0px;
+                font-size: medium;
+            }
+
+            th {
+                background: #ddd;
+                position: sticky;
+                top: 52px;
+                box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+            }
+
+            th, td {
+                width: fit-content;
+            }
+        </style>
+
+        <nav id="nav" class="navbar">
+            <p><b>
+                URL: <a href="http://m-h.comsciproject.com" style="color: black;">http://m-h.comsciproject.com</a><br>
+                Delay: <span id="in_delay">null</span>, Views: <span id="in_views">0</span>, Recent: +<span id="in_recent">0</span><br>
+            </b></p>
+        </nav>
+        <div id="bi_data">
+            <table class='table table-bordered table-striped table-hover'>
+                <thead>
+                    <tr>
+                        <th scope='col'>Loading...</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        
+        <script>
+            var open = false, asc = false;
+            var n = 0, change = 0, now = 0;
+            var rest = 0;
+
+            var html = null;
+
+            const take_row = function (item, ind) {
+                var metco = {GET: 'green', POST: 'darkorange', DELETE: 'red', PUT: 'blue'};
+                var row = "<tr id='@ind' onclick='take_onitem(@ind)'>"
+                    +"<td>@ind</td>"
+                    +"<td>@date</td>"
+                    +"<td><code style='color:@metco;'>@method</code></td>"
+                    +"<td><a href='@url' target='_blank'>@url</a></td>"
+                    +"</tr>";
+
+                row = row.replaceAll('@ind', ind);
+                row = row.replaceAll('@date', item.date);
+                row = row.replaceAll('@method', item.method);
+                row = row.replaceAll('@url', item.URL);
+                row = row.replaceAll('@metco', metco[item.method]);
+                            
+                return row;
+            };
+
+            const take_entire = function (_items_) {
+                const items = _items_;
+
+                var collect = "<table class='table table-bordered table-striped table-hover'>"
+                    + "<thead>"
+                        + "<tr id='head_row'>"
+                            + "<th scope='col'><a href='#' onclick='take_asc()' style='color:black;'>#</th>"
+                            + "<th scope='col'>Date</th>"
+                            + "<th scope='col'>Methods</th>"
+                            + "<th scope='col'>URL</th>"
+                        + "</tr>"
+                    + "</thead>"
+                    + "<tbody"
+                    + "@place"
+                    + "</tbody>"
+                +"</table>";
+
+                var place = "";
+
+                for (i in items) {
+                    if (asc) {
+                        place = place + take_row(items[i], i);
+                    } else {
+                        place = take_row(items[i], i) + place;
+                    }
+                    
+                }
+
+                collect = collect.replace('@place', "<tr></tr>" + place + "<tr></tr>");
+
+                return collect;
+            };
+
+            const take_rest = function (rest, n) {
+                for (var i = (n-rest); i < n; i++) {
+                    if (i % 2 == 0) {
+                        document.getElementById(i).style.background = "#e3e3e3";
+                    } else {
+                        document.getElementById(i).style.background = "#dddddd";
+                    }
+                }
+            };
+
+            const take_info = function (_data_) {
+                const data = _data_;
+                const keys = Object.keys(data);
+
+                for (var i in keys) {
+                    document.getElementById(keys[i]).innerHTML = data[keys[i]];
+                }
+            };
+
+            const take_onitem = function (id) {
+                if (html != null) {
+                    rest = 0;
+                    take_html('bi_data', html);
+                }
+
+                if (id % 2 == 0) {
+                    document.getElementById(id).style.background = "#e3e3e3";
+                } else {
+                    document.getElementById(id).style.background = "#dddddd";
+                }
+            }
+
+            const take_asc = function () {
+                asc = !asc;
+                open = false;
+            }
+
+            const take_off = function () {
+                open = false;
+                rest = 0;
+            };
+
+            const take_width = function () {
+                const head_row = document.getElementById('head_row').clientWidth;
+
+                document.getElementById('nav').style.width = head_row + 'px';
+            };
+
+            const take_html = function (id, html) {
+                document.getElementById(id).innerHTML = html;
+            };
+                        
+            const app = {
+                use: async function (method, URL, body, delay, save) {
+                    const time_delay = delay;
+                    const path_save = save;
+
+                    const option = {
+                        method: method,
+                        headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
+                        body: JSON.stringify(body)
+                    };
+
+                    while (true) {
+                        const response = await fetch(URL, option);
+                        const content = await response.json();
+
+                        if (content.status == 1) {
+                            n = content.data.length;
+
+                            if (!open || change != n) {
+                                now = !open ? 0 : n-change;
+                                rest += now;
+
+                                open = true;
+                                change = n;
+
+                                html = take_entire(content.data);
+                                
+                                take_html('bi_data', html);
+                                take_info({in_delay: delay, in_views: n, in_recent: rest});
+                                take_rest(rest, n);
+                            }
+                        }
+
+                        take_width();
+                    }
+                },
+            };
+
+            app.use('POST', 'http://m-h.comsciproject.com/eyJ1cmwiOiJ0dW5uZWwifQ', {
+                usage_key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb2dzIn0.Pr4s4ZvZ1jlBKrwNbpDSoSaDAIBXjGxDhB9m0rtCufY'
+            }, 'null', 'saved/log_backup_.xlsx');
+        </script>
+    </body>
+</html>

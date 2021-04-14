@@ -1,0 +1,26 @@
+{
+    "input": {
+        "users_id": []
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "found": null,
+            "list": [{
+                "id": null,
+                "username": null,
+                "full_name": null,
+                "birthday": null,
+                "picture": {
+                    "raw": null,
+                    "show": null
+                }
+            }]
+        }
+    }
+}

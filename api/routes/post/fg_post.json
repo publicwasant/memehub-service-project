@@ -1,0 +1,86 @@
+{
+    "input": {
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "id": null,
+            "date": null,
+            "time": null,
+            "owner": {
+                "id": null,
+                "username": null,
+                "full_name": null,
+                "birthday": null,
+                "picture": {
+                    "id": null,
+                    "raw": null,
+                    "show": null
+                }
+            },
+            "material": {
+                "caption": null,
+                "picture": {
+                    "id": null,
+                    "raw": null,
+                    "show": null
+                }
+            },
+            "activities": {
+                "reaction": {
+                    "found": null,
+                    "list": [{
+                        "id": null,
+                        "user": {
+                            "id": null,
+                            "username": null,
+                            "full_name": null,
+                            "birthday": null,
+                            "picture": {
+                                "id": null,
+                                "raw": null,
+                                "show": null
+                            }
+                        },
+                        "post": {
+                            "id": null
+                        }
+                    }]
+                },
+                "comments": {
+                    "found": null,
+                    "list": [{
+                        "id": null,
+                        "user": {
+                            "id": null,
+                            "username": null,
+                            "full_name": null,
+                            "birthday": null,
+                            "picture": {
+                                "id": null,
+                                "raw": null,
+                                "show": null
+                            }
+                        },
+                        "materials": {
+                            "text": null,
+                            "picture": {
+                                "id": null,
+                                "raw": null,
+                                "show": null
+                            }
+                        },
+                        "post": {
+                            "id": null
+                        }
+                    }]
+                }
+            }
+        }
+    }
+}

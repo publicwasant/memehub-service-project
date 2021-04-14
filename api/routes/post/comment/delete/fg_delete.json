@@ -1,0 +1,17 @@
+{
+    "input": {
+        "user_id": null,
+        "comment_id": null
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "deleted": null
+        }
+    }
+}

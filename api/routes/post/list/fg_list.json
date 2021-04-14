@@ -1,0 +1,86 @@
+{
+    "input": {
+        "posts_id": []
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "found": null,
+            "list": [{
+                "id": null,
+                "owner": {
+                    "id": null,
+                    "username": null,
+                    "full_name": null,
+                    "birthday": null,
+                    "picture": {
+                        "id": null,
+                        "raw": null,
+                        "show": null
+                    }
+                },
+                "material": {
+                    "caption": null,
+                    "picture": {
+                        "id": null,
+                        "raw": null,
+                        "show": null
+                    }
+                },
+                "activities": {
+                    "reaction": {
+                        "found": null,
+                        "list": [{
+                            "user": {
+                                "id": null,
+                                "username": null,
+                                "full_name": null,
+                                "birthday": null,
+                                "picture": {
+                                    "id": null,
+                                    "raw": null,
+                                    "show": null
+                                }
+                            },
+                            "reaction": {
+                                "id": null,
+                                "user_id": null,
+                                "post_id": null
+                            }
+                        }]
+                    },
+                    "comments": {
+                        "found": null,
+                        "list": [{
+                            "user": {
+                                "id": null,
+                                "username": null,
+                                "full_name": null,
+                                "birthday": null,
+                                "picture": {
+                                    "id": null,
+                                    "raw": null,
+                                    "show": null
+                                }
+                            },
+                            "comment": {
+                                "id": null,
+                                "text": null,
+                                "picture": {
+                                    "id": null,
+                                    "raw": null,
+                                    "show": null
+                                }
+                            }
+                        }]
+                    }
+                }
+            }]
+        }
+    }
+}

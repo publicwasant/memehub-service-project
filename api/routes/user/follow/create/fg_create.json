@@ -1,0 +1,17 @@
+{
+    "input": {
+        "user_id_u": null,
+        "user_id_v": null
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "follow_id": null
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "input": {
+        "u_username": null,
+        "u_fullname": null,
+        "u_birthday": null,
+        "u_password": null
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "token": null
+        }
+    }
+}

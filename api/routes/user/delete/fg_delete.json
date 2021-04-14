@@ -1,0 +1,17 @@
+{
+    "input": {
+        "u_username": null,
+        "u_password": null
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "deleted": null
+        }
+    }
+}

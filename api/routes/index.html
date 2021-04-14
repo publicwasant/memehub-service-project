@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <br>
+            <h2>Memehub Web Service</h2>
+            <p><code>http://m-h.comsciproject.com</code></p>
+            <hr>
+
+            <span style="color:darkslateblue" class="glyphicon glyphicon-star-empty"></span> <a href="#" onclick="visit('ug_5')" >อัพเกรด - 26 ก.พ. 2564</a><br>
+            <ul id="ug_5" style="list-style-type:circle">
+                <li>เพิ่ม <a href="../post/newsfeed/__"><code style="color:darkslategrey;">/post/newsfeed</code></a> สำหรับค้นหาฟีดข่าวของโพสต์ทั้งหมด</li>
+            </ul>
+
+            <span style="color:darkslateblue" class="glyphicon glyphicon-star-empty"></span> <a href="#" onclick="visit('ug_4')" >อัพเกรด - 24 ก.พ. 2564</a><br>
+            <ul id="ug_4" style="list-style-type:circle">
+                <li>แก้ไข <code style="color:darkslategrey;">/post</code> ให้รีเทิร์นวันที่และเวลาในการโพสต์</li>
+                <li>แก้ไข <code style="color:darkslategrey;">/post</code> ให้ค้นหาโพสต์ตามวันที่ได้ เช่น <code style="color:darkslategrey;">/post?date=2021-02-24</code></li>
+            </ul>
+
+            <span style="color:darkslateblue;" class="glyphicon glyphicon-star-empty"></span> <a href="#" onclick="visit('ug_3')">อัพเกรด - 6 ก.พ. 2564</a> <br>
+            <ul id="ug_3" style="list-style-type:circle;">
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/edit</code> เป็นเซอร์วิสใหม่สำหรับการแกไขโพสต์ และจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/list</code> เป็นเซอร์วิสใหม่สำหรับการค้นหาลิสต์โพสต์</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/reaction</code> เป็นเซอร์วิสใหม่สำหรับการค้นหาการถูกใจต่อโพสต์</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/reaction/create</code> เป็นเซอร์วิสใหม่สำหรับการเพิ่มการถูกใจโพสต์ และจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/reaction/delete</code> เป็นเซอร์วิสใหม่สำหรับการลบการถูกใจต่อโพสต์ และจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/reaction/list</code> เป็นเซอร์วิสใหม่สำหรับการค้นหาลิสต์การถูกใจต่อโพสต์</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/comment</code> เป็นเซอร์วิสใหม่สำหรับการค้นหาแสดงความคิดเห็นต่อโพสต์</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/comment/create</code> เป็นเซอร์วิสใหม่สำหรับการเพิ่มการแสดงความคิดเห็นต่อโพสต์ และจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/comment/delete</code> เป็นเซอร์วิสใหม่สำหรับการลบการแสดงความคิดเห็นต่อโพสต์ และจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/comment/edit</code> เป็นเซอร์วิสใหม่สำหรับการแก้ไขการแสดงความคิดเห็นต่อโพสต์ และจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/comment/list</code> เป็นเซอร์วิสใหม่สำหรับการค้นหาลิสต์การแสดงความคิดเห็นต่อโพสต์</li>
+            </ul>
+            
+            <span style="color:darkslateblue" class="glyphicon glyphicon-star-empty"></span> <a href="#" onclick="visit('ug_2')" >อัพเกรด - 1 ก.พ. 2564</a><br>
+            <ul id="ug_2" style="list-style-type:circle">
+                <li>เพิ่ม <code style="color:darkslategrey;">/post</code> เป็นเซอร์วิสใหม่สำหรับการค้นหาโพสต์</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/create</code> เป็นเซอร์วิสใหม่สำหรับการเพิ่มโพสต์ และจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/post/delete</code> เป็นเซอร์วิสใหม่สำหรับการลบโพสต์ และจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+            </ul>
+
+            <span style="color:darkslateblue" class="glyphicon glyphicon-star-empty"></span> <a href="#" onclick="visit('ug_1')">อัพเกรด - 26 ม.ค. 2564</a><br>
+            <ul id="ug_1" style="list-style-type:circle">
+                <li>เพิ่ม <code style="color:darkslategrey;">/user/logout</code> เป็นเซอร์วิสใหม่สำหรับการออกจากระบบ และจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/user/follow/related</code> เป็นเซอร์วิสใหม่สำหรับการค้นหาการติดตามของผู้ใช้ที่มีความเกี่ยวข้องกัน และจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/user/follow/followers</code> เป็นเซอร์วิสใหม่สำหรับการค้นหาผู้ติดตามของผู้ใช และจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+                <li>เพิ่ม <code style="color:darkslategrey;">/user/follow/following</code> เป็นเซอร์วิสใหม่สำหรับการค้นหาผู้ใช้ที่กำลังติดตามอยู่ และจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+                <li>แก้ไข <code style="color:darkslategrey;">/user/register</code> หลังจากที่ผู้ใช้ได้สมัครสมาชิกสำเร็จแล้วผู้ใช้จะได้รับ JWT-token</li>
+                <li>แก้ไข <code style="color:darkslategrey;">/picture/upload</code> การอัพโหลดรูปภาพจำเป็นต้องทำการ Authentication ด้วย JWT-token เพื่อใช้งานเท่านั้น</li>
+            </ul>
+
+            <br>
+
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr style="background-color:#ddd;">
+                        <th scope="col">Services</th>
+                        <th scope="col">Methods</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <a href="../user/__">http://m-h.comsciproject.com/user</a>
+                            <span style="color:darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: green;">GET</code></td>
+                        <td>
+                            ค้นหาผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/register">http://m-h.comsciproject.com/user/register</a>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            สมัครสมาชิก
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/login">http://m-h.comsciproject.com/user/login</a>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            เข้าสู่ระบบ
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/logout">http://m-h.comsciproject.com/user/logout</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ออกจากระบบ
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/list">http://m-h.comsciproject.com/user/list</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ค้นหาลิสต์ผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/delete">http://m-h.comsciproject.com/user/delete</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ลบผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/edit">http://m-h.comsciproject.com/user/edit</a>
+                        </td>
+                        <td><code style="color: green;">GET</code></td>
+                        <td>
+                            แก้ไขข้อมูลผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/edit/info">http://m-h.comsciproject.com/user/edit/info</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color:blue;">PUT</code></td>
+                        <td>
+                            แก้ไขข้อมูลผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/edit/picture">http://m-h.comsciproject.com/user/edit/picture</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code>PUT</code></td>
+                        <td>
+                            แก้ไขรูปภาพโปรไฟล์ของผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/edit/password">http://m-h.comsciproject.com/user/edit/password</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color:blue;">PUT</code></td>
+                        <td>
+                            แก้ไขรหัสผ่านของผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/follow">http://m-h.comsciproject.com/user/follow</a>
+                        </td>
+                        <td><code style="color: green;">GET</code></td>
+                        <td>
+                            การติดตามผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/follow/related">http://m-h.comsciproject.com/user/follow/related</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ค้นหาการติดตามผู้ใช้ที่มีความเกี่ยวข้องกัน
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/follow/create">http://m-h.comsciproject.com/user/follow/create</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            เพิ่มการติดตามผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/follow/delete">http://m-h.comsciproject.com/user/follow/delete</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ลบการติดตามผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/follow/followers">http://m-h.comsciproject.com/user/follow/followers</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ค้นหาผู้ติดตามของผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../user/follow/following">http://m-h.comsciproject.com/user/follow/following</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ค้นหาผู้ใช้ที่กำลังติดตามอยู่
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../picture/__">http://m-h.comsciproject.com/picture</a>
+                        </td>
+                        <td><code style="color:green;">GET</code></td>
+                        <td>
+                            ค้นหารูปภาพ
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../picture/upload">http://m-h.comsciproject.com/picture/upload</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            อัพโหลดรูปภาพ
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../picture/delete">http://m-h.comsciproject.com/picture/delete</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ลบรูปภาพ
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/__">http://m-h.comsciproject.com/post</a>
+                        </td>
+                        <td><code style="color: green;">GET</code></td>
+                        <td>
+                            ค้นหาโพสต์
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/newsfeed/__">http://m-h.comsciproject.com/post/newsfeed</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: green;">GET</code></td>
+                        <td>
+                            ค้นหาฟีดข่าวของโพสต์
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/create">http://m-h.comsciproject.com/post/create</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            เพิ่มโพสต์
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/delete">http://m-h.comsciproject.com/post/delete</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ลบโพสต์
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/edit">http://m-h.comsciproject.com/post/edit</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color:blue;">PUT</code></td>
+                        <td>
+                            แก้ไขโพสต์
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/list">http://m-h.comsciproject.com/post/list</a>
+                        </td>
+                        <td><code style="color:darkorange;">POST</code></td>
+                        <td>
+                            ค้นหาลิสต์ของโพสต์
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/reaction/__">http://m-h.comsciproject.com/post/reaction</a>
+                        </td>
+                        <td><code style="color: green;">GET</code></td>
+                        <td>
+                            ค้นหาการกดถูกใจของโพสต์
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/reaction/create">http://m-h.comsciproject.com/post/reaction/create</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            เพิ่มการถูกใจต่อโพสต์
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/reaction/delete">http://m-h.comsciproject.com/post/reaction/delete</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ลบการถูกใจต่อโพสต์
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/reaction/list">http://m-h.comsciproject.com/post/reaction/list</a>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ค้นหาลิสต์การถูกใจของผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/comment/__">http://m-h.comsciproject.com/post/comment</a>
+                        </td>
+                        <td><code style="color: green;">GET</code></td>
+                        <td>
+                            ค้นหาการแสดงความคิดเห็น
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/comment/create">http://m-h.comsciproject.com/post/comment/create</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            เพิ่มการแสดงความคิดเห็นต่อโพสต์
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/comment/delete">http://m-h.comsciproject.com/post/comment/delete</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ลบการแสดงความคิดเห็นต่อโพสต์
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/comment/edit">http://m-h.comsciproject.com/post/comment/edit</a>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color:blue;">PUT</code></td>
+                        <td>
+                            แก้ไขการแสดงความคิดเห็นต่อโพสต์
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="../post/comment/list">http://m-h.comsciproject.com/post/comment/list</a>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ค้นหาลิสต์การแสดงความคิดเห็นของผู้ใช้แล้ว
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code style="color: darkslategrey;">http://m-h.comsciproject.com/chatroom</code>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: green;">GET</code></td>
+                        <td>
+                            ค้นหากล่องข้อความของผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code style="color: darkslategrey;">http://m-h.comsciproject.com/chatroom/create</code>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            สร้างกล่องข้อความของผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code style="color: darkslategrey;">http://m-h.comsciproject.com/chatroom/delete</code>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ลบกล่องข้อความของผู้ใช้
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code style="color: darkslategrey;">http://m-h.comsciproject.com/chatroom/message</code>
+                            <span style="color: darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: green;">GET</code></td>
+                        <td>
+                            ค้นหาข้อความที่ผู้ใช้ส่ง
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code style="color: darkslategrey;">http://m-h.comsciproject.com/chatroom/message/send</code>
+                            <span style="color:darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ส่งข้อความ
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code style="color: darkslategrey;">http://m-h.comsciproject.com/chatroom/message/delete</code>
+                            <span style="color:darkslategrey;" class="glyphicon glyphicon-leaf"></span>
+                        </td>
+                        <td><code style="color: darkorange;">POST</code></td>
+                        <td>
+                            ลบข้อความ
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div style="height: 300px;">
+        </div>
+
+        <script>
+            function visit(tag_id) {
+                var tag = document.getElementById(tag_id);
+                
+                if (tag.style.display === "none") {
+                    tag.style.display = "block";
+                } else {
+                    tag.style.display = "none";
+                }
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "input": {
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "p_id": null,
+            "p_user_id": null,
+            "p_date_upload": null,
+            "p_pathname": null
+        }
+    }
+}

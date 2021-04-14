@@ -1,0 +1,28 @@
+{
+    "input": {
+        "user_id": 97,
+        "post_id": 47,
+        "comment": {
+            "text": null,
+            "picture_id": null
+        }
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "id": null,
+            "comment": {
+                "text": null,
+                "picture": {
+                    "raw": null,
+                    "show": null
+                }
+            }
+        }
+    }
+}

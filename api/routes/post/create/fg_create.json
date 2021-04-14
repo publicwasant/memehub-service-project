@@ -1,0 +1,80 @@
+{
+    "input": {
+        "user_id": null,
+        "caption": null,
+        "picture_id": null
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "id": null,
+            "owner": {
+                "id": null,
+                "username": null,
+                "full_name": null,
+                "birthday": null,
+                "picture": {
+                    "raw": null,
+                    "show": null
+                }
+            },
+            "material": {
+                "caption": null,
+                "picture": {
+                    "raw": null,
+                    "show": null
+                }
+            },
+            "activities": {
+                "reaction": {
+                    "found": null,
+                    "list": [{
+                        "user": {
+                            "id": null,
+                            "username": null,
+                            "full_name": null,
+                            "birthday": null,
+                            "picture": {
+                                "raw": null,
+                                "show": null
+                            }
+                        },
+                        "reaction": {
+                            "id": null,
+                            "user_id": null,
+                            "post_id": null
+                        }
+                    }]
+                },
+                "comments": {
+                    "found": null,
+                    "list": [{
+                        "user": {
+                            "id": null,
+                            "username": null,
+                            "full_name": null,
+                            "birthday": null,
+                            "picture": {
+                                "raw": null,
+                                "show": null
+                            }
+                        },
+                        "comment": {
+                            "id": null,
+                            "text": null,
+                            "picture": {
+                                "raw": null,
+                                "show": null
+                            }
+                        }
+                    }]
+                }
+            }
+        }
+    }
+}

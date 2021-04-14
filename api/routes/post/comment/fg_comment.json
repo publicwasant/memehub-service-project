@@ -1,0 +1,37 @@
+{
+    "input": {
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+            "id": null,
+            "user": {
+                "id": null,
+                "username": null,
+                "full_name": null,
+                "birthday": null,
+                "picture": {
+                    "id": null,
+                    "raw": null,
+                    "show": null
+                }
+            },
+            "material": {
+                "text": null,
+                "picture": {
+                    "id": null,
+                    "raw": null,
+                    "show": null
+                }
+            },
+            "post": {
+                "id": null
+            }
+        }
+    }
+}

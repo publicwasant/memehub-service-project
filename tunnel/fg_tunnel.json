@@ -1,0 +1,15 @@
+{
+    "input": {
+        "usage_key": null
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "input": {
+    },
+    "output": {
+        "status": null,
+        "descript": null,
+        "error": {
+            "state": null,
+            "message": null
+        },
+        "data": {
+        }
+    }
+}
